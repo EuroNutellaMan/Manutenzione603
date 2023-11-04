@@ -43,7 +43,7 @@ def display():
     print(YELLOW + text + RESET)
 
     # Reloads every 2 hours
-    sleep(15600)
+    sleep(7200)
     display()
 
 display()
