@@ -69,7 +69,7 @@ def AddMon():
     cnfrm = input('Confirm? [y/n] ')
     if cnfrm == 'y':
         logs.append(logline)
-        total = total + var
+        total = round(total + var, 2)
         with open('MoneyInJar.txt', 'w') as moneyfile:
             moneyfile.write(str(total))
         logline = logline + '\n'
@@ -113,7 +113,7 @@ def RemMon():
     cnfrm = input('Confirm? [y/n] ')
     if cnfrm == 'y':
         logs.append(logline)
-        total = total - var
+        total = round(total - var, 2)
         with open('MoneyInJar.txt', 'w') as moneyfile:
             moneyfile.write(str(total))
         logline = logline + '\n'

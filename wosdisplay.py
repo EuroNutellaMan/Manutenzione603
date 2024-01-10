@@ -41,8 +41,8 @@ def display():
     else:
         print(GREEN + 'No shameful individuals found!' + RESET)
     
-    # Reloads every 6 hours
-    sleep(21600)
-    display()
+    # Reloads every 1 days
+    sleep(86400)
 
-display()
+while True:
+    display()

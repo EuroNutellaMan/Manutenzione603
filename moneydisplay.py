@@ -42,8 +42,8 @@ def display():
     print(RESET)
     print(YELLOW + text + RESET)
 
-    # Reloads every 2 hours
-    sleep(7200)
-    display()
+    # Reloads every 10 minutes
+    sleep(600)
 
-display()
+while True:
+    display()
