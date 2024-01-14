@@ -25,7 +25,11 @@ else:
     total = float(total)
 
 # List of names and loglines
-names = ['Lorenzo','Abdu','Serhat','Hasnain']
+names = []
+with open('names.txt', 'r') as file:
+    name_list = file.readlines
+for name in name_list:
+    names.append(name)
 logs = []
 if os.path.exists('MoneyLog.txt') == False:
     logs = []
@@ -36,9 +40,9 @@ else:
             line = line.strip('\n')
             components = line.split(' ')
             if '+' in components[0]:
-                logline = GREEN + components[0] + RESET + ' ' + BLUE + components[1] + RESET + ' ' + YELLOW + components[2] + ' ' + components[3] + RESET
+                logline = GREEN + components[0] + RESET + ' ' + BLUE + components[1].replace('_', ' ') + RESET + ' ' + YELLOW + components[2] + ' ' + components[3] + RESET
             elif '-' in components[0]:
-                logline = RED + components[0] + ' ' + components[1] + RESET + ' ' + BLUE + components[2] + RESET + ' ' + YELLOW + components[3] + ' ' + components[4] + RESET
+                logline = RED + components[0] + ' ' + components[1].replace('_', ' ') + RESET + ' ' + BLUE + components[2] + RESET + ' ' + YELLOW + components[3] + ' ' + components[4] + RESET
             logs.append(logline)
 
 # Function to add money

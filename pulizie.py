@@ -18,7 +18,11 @@ RESET = Style.RESET_ALL
 
 # List rooms and names
 rooms = ['Living room','Bathroom','Right bedroom','Front bedroom']
-names = ['Lorenzo','Abdu','Serhat','Hasnain']
+names = []
+with open('names.txt', 'r') as file:
+    name_list = file.readlines()
+for name in name_list:
+    names.append(name)
 
 
 # Statuses
