@@ -15,7 +15,7 @@ sudo apt install tmux
 0b. Install all python dependencies:
 
 ```
-pip install brotlicffi catppuccin certifi cffi charset-normalizer colorama contourpy cycler dbus-python decorator defusedxml ffmpeg-python fonttools future idna imageio imageio-ffmpeg kiwisolver matplotlib moviepy numpy olefile opencv packaging Pillow proglog psutil pycparser pyfiglet pyparsing pypng PyQt PyQt-sip PyQt PyQt-sip python-dateutil pytube qrcode requests six tqdm typing_extensions urllib
+pip install -r requirements.txt 
 ```
 
 1. Clone this repository in your preferred path:
